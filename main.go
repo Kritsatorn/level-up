@@ -6,5 +6,5 @@ import (
 
 func main() {
 
-	fmt.Println("Hello, World! from Satang")
+	fmt.Println("Hello, World! from Satang Test")
 }
