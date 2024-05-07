@@ -6,5 +6,5 @@ import (
 
 func main() {
 
-	fmt.Println("Hello, World! from Satang Test")
+	fmt.Println("Hello, World! from Satang Test Commit")
 }
