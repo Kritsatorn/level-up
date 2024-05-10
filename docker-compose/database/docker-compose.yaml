@@ -1,0 +1,21 @@
+services:
+  postgres:
+    container_name: levelup-container
+    image: postgres:16-alpine
+    restart: on-failure
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: sqladmin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+      TZ: Asia/Bangkok
+    ports:
+      - 5432:5432 
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "sqladmin", "-d", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes:
+  postgres_data:
